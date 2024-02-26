@@ -52,7 +52,7 @@ def load_y_data(y_file_path):
         df_Y = pd.read_csv(y_file_path, sep= ',' )
         print ( "y  shape ", df_Y.shape)
         
-        # exclude the first column if includes the sample names
+        # exclude the first column of samples'names 
         df_Y = df_Y.iloc[:, 1:]      
         print ( "y sliced dataframe shape", df_Y.shape)
         print ( "y sliced dataframe", df_Y)
