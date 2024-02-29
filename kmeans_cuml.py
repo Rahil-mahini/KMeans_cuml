@@ -231,7 +231,7 @@ if __name__ == '__main__':
     
     combined_data = combine_datasets(X_file_path , y_file_path, num_partitions )
   
-    # Perform MiniBatchKMeans clustering
+    # Perform KMeans clustering
     cluster_labels = perform_clustering(combined_data, num_clusters)
     
     # Find the cluster containing Y
