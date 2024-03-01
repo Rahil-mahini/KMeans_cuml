@@ -80,11 +80,7 @@ def combine_datasets(X_file_path, y_file_path, num_partitions):
     combined_data = cudf.concat([X, Y], axis=0)
     print ( "combined_data shape", combined_data.shape)
     print ( "combined_data ", combined_data)
-    
-    # Create dask_cudf from cudf
-    combined_data = dask_cudf.from_cudf(combined_data, npartitions= num_partitions)
-    print ("combined_data type ", type (combined_data))
-    
+
     return combined_data
 
 
